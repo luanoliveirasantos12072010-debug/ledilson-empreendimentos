@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LG Ledilson Empreendimentos | Aluguel de Apartamentos e Kitnets em Garanhuns</title>
+<meta name="description" content="Ledilson Empreendimentos (LG): aluguel de apartamentos, kitnets, flats mobiliados, casas e pontos comerciais em Garanhuns - PE. Rua Prof. Marcos da Fonseca, 576, Heliópolis. WhatsApp (87) 99115-6809.">
+<meta property="og:title" content="LG Ledilson Empreendimentos · Aluguel em Garanhuns">
+<meta property="og:description" content="Apartamentos, kitnets, flats mobiliados e pontos comerciais para alugar em Garanhuns.">
+<meta property="og:image" content="img/saovicente.jpg">
+<meta name="theme-color" content="#f4f6fd">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233341a8'/%3E%3Cpath d='M12 48V22M18 48V16M24 48V12' stroke='%238fb3ff' stroke-width='4'/%3E%3Ctext x='29' y='44' font-family='Arial' font-weight='700' font-size='22' fill='%23fff'%3ELG%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&family=Inter:wght@400;500;600&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"RealEstateAgent","name":"LG Ledilson Empreendimentos","description":"Aluguel de apartamentos, kitnets, flats mobiliados, casas e pontos comerciais em Garanhuns - PE.","telephone":"+55 87 99115-6809","url":"https://ledilsonempreendimentos.com.br","address":{"@type":"PostalAddress","streetAddress":"Rua Prof. Marcos da Fonseca, 576 - Heliópolis","addressLocality":"Garanhuns","addressRegion":"PE","addressCountry":"BR"},"openingHours":"Mo-Fr 07:00-17:00"}
+</script>
+<style>
+/* Azul royal da marca dele, em versão clara e luminosa. Amarelo de janela acesa como destaque. Sem preto */
+:root{
+  --bg:#f4f6fd; --white:#fff; --mist:#e8ecfa; --mist2:#d6ddf5;
+  --blue:#3341a8; --blue2:#26318a; --sky:#6f93f2; --skyL:#e3ebff;
+  --sun:#f5c24c; --sunL:#fff4d6;
+  --ink:#232a4a; --mid:#636b88; --line:rgba(35,42,74,.12);
+  --green:#2f9461; --greenL:#e2f4ea;
+  --disp:"Bricolage Grotesque",system-ui,sans-serif; --body:"Inter",system-ui,sans-serif;
+  --ease:cubic-bezier(.16,.84,.24,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16.5px;line-height:1.65}
+body.loading{overflow:hidden}
+a{color:inherit}
+img{display:block;max-width:100%}
+[hidden]{display:none!important}
+::selection{background:var(--sunL)}
+.wrap{max-width:1240px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}
+h1,h2,h3{font-family:var(--disp);font-weight:600;line-height:1.02;letter-spacing:-.03em;margin:0;text-wrap:balance}
+h2{font-size:clamp(34px,5vw,62px)}
+h3{font-size:21px;line-height:1.2;letter-spacing:-.01em}
+p{margin:0}
+.b{color:var(--blue)}
+.hl{background:linear-gradient(transparent 62%,var(--sunL) 62%)}
+.kick{display:inline-flex;align-items:center;gap:10px;font-family:var(--disp);font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--blue)}
+.kick i{width:10px;height:10px;background:var(--sun);border-radius:2px}
+.pad{padding-block:clamp(80px,10vw,130px)}
+
+/* ===== Abertura: prédio acendendo ===== */
+.loader{position:fixed;inset:0;z-index:300;display:grid;place-items:center;background:linear-gradient(180deg,#eef2ff,#dfe6fb)}
+.loader.go{opacity:0;visibility:hidden;transition:opacity .7s var(--ease),visibility .7s}
+.ld{display:flex;flex-direction:column;align-items:center;gap:18px;text-align:center;padding:20px;transition:transform .7s var(--ease)}
+.loader.go .ld{transform:translateY(-30px) scale(.96)}
+.ld svg{width:min(150px,38vw);height:auto}
+.ld .num{font-family:var(--disp);font-weight:700;font-size:clamp(46px,10vw,72px);line-height:1;color:var(--blue);font-variant-numeric:tabular-nums}
+.ld .num small{font-size:.45em;color:var(--sky)}
+.ld .nm{font-family:var(--disp);font-weight:700;font-size:18px;color:var(--ink);letter-spacing:.02em}
+.ld .nm span{display:block;font-family:var(--body);font-weight:500;font-size:12.5px;letter-spacing:.18em;color:var(--mid)}
+.win-l{fill:#c9d3f2;transition:fill .25s}
+.win-l.on{fill:var(--sun)}
+
+/* ===== Topo ===== */
+.nav{position:fixed;inset:0 0 auto;z-index:60;padding-block:14px;transition:background .4s,padding .4s,box-shadow .4s}
+.nav.solid{background:rgba(244,246,253,.9);backdrop-filter:blur(16px);padding-block:8px;box-shadow:0 1px 0 var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo svg{width:44px;height:44px;flex:none}
+.logo b{display:block;font-family:var(--disp);font-weight:700;font-size:20px;line-height:1;color:var(--blue)}
+.logo small{display:block;font-size:10.5px;font-weight:600;letter-spacing:.2em;color:var(--mid);text-transform:uppercase;margin-top:3px}
+.links{display:flex;gap:26px;font-weight:500;font-size:15px}
+.links a{text-decoration:none;position:relative;padding-block:4px}
+.links a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--sun);transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease)}
+.links a:hover::after{transform:scaleX(1);transform-origin:left}
+@media(max-width:980px){.links{display:none}}
+
+/* ===== Botões ===== */
+.btn{--x:0px;--y:0px;position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border-radius:14px;font-family:var(--disp);font-weight:600;font-size:16px;text-decoration:none;border:0;cursor:pointer;transform:translate(var(--x),var(--y));transition:transform .35s var(--ease),box-shadow .4s,background .4s,color .4s;overflow:hidden;isolation:isolate}
+.btn svg{width:20px;height:20px;flex:none}
+.btn.pri{background:var(--blue);color:#fff;box-shadow:0 14px 30px -14px rgba(51,65,168,.8)}
+.btn.pri::before{content:"";position:absolute;inset:0;background:var(--blue2);transform:translateY(101%);transition:transform .45s var(--ease);z-index:-1}
+.btn.pri:hover::before{transform:none}
+.btn.sun{background:var(--sun);color:var(--ink);box-shadow:0 14px 30px -14px rgba(200,150,30,.8)}
+.btn.sun:hover{background:#f8cf6a}
+.btn.sec{background:var(--white);color:var(--ink);box-shadow:inset 0 0 0 1px var(--mist2)}
+.btn.sec:hover{box-shadow:inset 0 0 0 1px var(--blue);color:var(--blue)}
+.btn .arr{transition:transform .4s var(--ease)}
+.btn:hover .arr{transform:translateX(5px)}
+.btn:focus-visible,a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--sky);outline-offset:3px}
+.nav .btn{padding:11px 18px;font-size:14.5px}
+@media(max-width:560px){.nav .btn span{display:none}.nav .btn{padding:11px}}
+
+/* ===== Hero ===== */
+.hero{position:relative;padding-top:118px;padding-bottom:40px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:auto -10% -30% 40%;height:80%;background:radial-gradient(ellipse,rgba(111,147,242,.28),transparent 65%);pointer-events:none}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+.hero-tx{display:flex;flex-direction:column;gap:24px;min-width:0}
+.hero h1{font-size:clamp(42px,6vw,84px)}
+.hero h1 .w{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.1em;margin-bottom:-.1em}
+.hero h1 .w>span{display:inline-block;transform:translateY(110%)}
+.ready .hero h1 .w>span{animation:up 1s var(--ease) forwards;animation-delay:calc(var(--i)*.06s + .1s)}
+@keyframes up{to{transform:none}}
+.lead{font-size:clamp(16.5px,1.4vw,18.5px);color:var(--mid);max-width:46ch}
+.fx{opacity:0;transform:translateY(22px)}
+.ready .fx{animation:fin 1s var(--ease) forwards;animation-delay:var(--d,.5s)}
+@keyframes fin{to{opacity:1;transform:none}}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.types{display:flex;gap:8px;flex-wrap:wrap}
+.types span{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:500;padding:7px 13px;border-radius:999px;background:var(--white);box-shadow:inset 0 0 0 1px var(--line)}
+.types span::before{content:"";width:8px;height:8px;border-radius:2px;background:var(--sun)}
+/* prédio interativo */
+.bld{position:relative;min-width:0}
+.bld svg{width:100%;height:auto;display:block;overflow:visible}
+.bld .fl{cursor:pointer}
+.bld .fl rect.band{fill:transparent;transition:fill .3s}
+.bld .fl:hover rect.band,.bld .fl.on rect.band{fill:rgba(245,194,76,.16)}
+.bld .w{fill:#cdd6f3;transition:fill .5s}
+.bld .w.lit{fill:var(--sun)}
+.bld .fl:hover .w,.bld .fl.on .w{fill:var(--sun)}
+.bld .tip{position:absolute;right:0;top:12%;width:min(260px,70%);background:var(--white);border-radius:18px;padding:16px 18px;box-shadow:0 30px 60px -30px rgba(35,42,74,.55),0 0 0 1px var(--line);display:flex;flex-direction:column;gap:6px;transition:top .5s var(--ease)}
+.bld .tip small{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--sky)}
+.bld .tip b{font-family:var(--disp);font-size:22px;line-height:1.1}
+.bld .tip p{font-size:14px;color:var(--mid)}
+.bld .tip a{font-weight:600;font-size:14px;color:var(--blue);text-decoration:none}
+.bld .hint{position:absolute;left:0;bottom:-4px;font-size:13px;color:var(--mid);display:flex;gap:6px;align-items:center}
+.bld .hint i{width:8px;height:8px;border-radius:50%;background:var(--sun);animation:bl 1.4s infinite}
+@keyframes bl{50%{opacity:.2}}
+@media(max-width:960px){.hero .wrap{grid-template-columns:1fr}.bld{max-width:520px;margin-inline:auto;width:100%}.bld .tip{position:relative;top:auto!important;right:auto;width:100%;margin-top:14px}.bld .hint{position:static;margin-top:8px}}
+
+/* ===== Faixa ===== */
+.mq{background:var(--blue);color:#fff;overflow:hidden;padding-block:18px}
+.mq .tr{display:flex;width:max-content;animation:mq 34s linear infinite}
+.mq span{font-family:var(--disp);font-weight:600;font-size:clamp(20px,2.6vw,30px);padding-inline:24px;white-space:nowrap;display:flex;align-items:center;gap:48px}
+.mq span::after{content:"";width:12px;height:12px;border-radius:3px;background:var(--sun)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* ===== Tipos ===== */
+.head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
+.head .l{display:flex;flex-direction:column;gap:16px;max-width:720px}
+.head p{color:var(--mid);max-width:42ch}
+.cats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.cat{--rx:0deg;--ry:0deg;position:relative;background:var(--white);border-radius:22px;padding:26px 22px;display:flex;flex-direction:column;gap:12px;box-shadow:0 0 0 1px var(--line);border:0;text-align:left;font:inherit;color:inherit;cursor:pointer;transform:perspective(900px) rotateX(var(--rx)) rotateY(var(--ry));transition:transform .4s var(--ease),box-shadow .4s;overflow:hidden}
+.cat:hover{box-shadow:0 0 0 1px var(--mist2),0 30px 60px -36px rgba(35,42,74,.5)}
+.cat .ic{width:64px;height:64px;border-radius:18px;background:var(--skyL);display:grid;place-items:center;color:var(--blue);transition:background .4s,color .4s}
+.cat:hover .ic{background:var(--blue);color:var(--sun)}
+.cat .ic svg{width:34px;height:34px}
+.cat p{color:var(--mid);font-size:15px;flex:1}
+.cat .go{font-weight:600;color:var(--blue);font-size:14.5px}
+.cat::after{content:"";position:absolute;right:-30px;bottom:-30px;width:90px;height:90px;border-radius:50%;background:var(--sunL);transform:scale(0);transition:transform .6s var(--ease)}
+.cat:hover::after{transform:scale(1.4)}
+.cat>*{position:relative;z-index:1}
+@media(max-width:1000px){.cats{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.cats{grid-template-columns:1fr}}
+
+/* ===== Unidades ===== */
+.units-sec{background:var(--white);border-block:1px solid var(--line)}
+.ufil{display:flex;gap:8px;flex-wrap:wrap}
+.ufil button{border:0;background:var(--bg);box-shadow:inset 0 0 0 1px var(--line);color:var(--ink);padding:10px 16px;border-radius:999px;font:500 14.5px var(--body);cursor:pointer;transition:all .3s}
+.ufil button.on{background:var(--blue);color:#fff;box-shadow:none}
+.units{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.u{display:flex;flex-direction:column;background:var(--bg);border-radius:22px;overflow:hidden;box-shadow:0 0 0 1px var(--line);transition:transform .5s var(--ease),box-shadow .5s;animation:pop .6s var(--ease) backwards;animation-delay:calc(var(--k)*.06s)}
+@keyframes pop{from{opacity:0;transform:translateY(18px)}}
+.u:hover{transform:translateY(-6px);box-shadow:0 0 0 1px var(--mist2),0 34px 60px -36px rgba(35,42,74,.5)}
+.u .ph{position:relative;aspect-ratio:4/3.3;overflow:hidden;background:var(--mist)}
+.u .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.u:hover .ph img{transform:scale(1.06)}
+.u .st{position:absolute;left:12px;top:12px;display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;padding:6px 11px;border-radius:999px;background:rgba(255,255,255,.95)}
+.u .st::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--mid)}
+.u .st.av{background:var(--green);color:#fff}
+.u .st.av::before{background:#bff2d4;animation:bl 1.4s infinite}
+.u .ty{position:absolute;right:12px;top:12px;font-size:12.5px;font-weight:600;padding:6px 11px;border-radius:999px;background:var(--blue);color:#fff}
+.u.rented .ph img{filter:saturate(.6)}
+.u .bd{padding:18px 20px 20px;display:flex;flex-direction:column;gap:10px;flex:1}
+.u .loc{font-size:14px;color:var(--mid);display:flex;gap:6px;align-items:center}
+.u .ft{display:flex;gap:6px;flex-wrap:wrap}
+.u .ft span{font-size:13px;padding:4px 10px;border-radius:8px;background:var(--white);box-shadow:inset 0 0 0 1px var(--line)}
+.u .ft span.wt{background:var(--skyL);box-shadow:none;color:var(--blue2);font-weight:600}
+.u .act{margin-top:auto;padding-top:6px}
+.u .act .btn{width:100%;padding:12px 16px;font-size:15px}
+@media(max-width:980px){.units{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.units{grid-template-columns:1fr}}
+
+/* ===== Lista de espera ===== */
+.wait .gr{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.wait .tx{display:flex;flex-direction:column;gap:20px}
+.wait .tx>p{color:var(--mid);max-width:44ch}
+.bell{width:76px;height:76px;border-radius:22px;background:var(--sun);display:grid;place-items:center;color:var(--ink);animation:ring 3s ease-in-out infinite;transform-origin:50% 10%}
+.bell svg{width:38px;height:38px}
+@keyframes ring{0%,70%,100%{transform:rotate(0)}75%{transform:rotate(12deg)}80%{transform:rotate(-10deg)}85%{transform:rotate(7deg)}90%{transform:rotate(-4deg)}}
+.form{background:var(--white);border-radius:24px;padding:clamp(22px,3vw,34px);box-shadow:0 0 0 1px var(--line),0 40px 80px -50px rgba(35,42,74,.5);display:grid;gap:14px}
+.seg{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;background:var(--bg);padding:5px;border-radius:14px}
+.seg button{border:0;background:transparent;padding:10px 6px;border-radius:10px;font:600 14px var(--body);color:var(--mid);cursor:pointer;transition:all .3s}
+.seg button.on{background:var(--white);color:var(--blue);box-shadow:0 4px 14px -6px rgba(35,42,74,.35)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.field label{font-size:13.5px;font-weight:600;color:var(--mid)}
+.field input,.field select{border:1px solid var(--line);border-radius:12px;padding:13px 14px;font:inherit;background:var(--bg);color:var(--ink);width:100%}
+.checks{display:flex;gap:8px;flex-wrap:wrap}
+.checks label{display:inline-flex;gap:8px;align-items:center;font-size:14px;padding:8px 12px;border-radius:10px;background:var(--bg);cursor:pointer;box-shadow:inset 0 0 0 1px var(--line)}
+.checks input{accent-color:var(--blue);width:16px;height:16px}
+@media(max-width:900px){.wait .gr{grid-template-columns:1fr}}
+@media(max-width:480px){.seg{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr}}
+
+/* ===== Vantagens ===== */
+.perks{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.pk{background:var(--white);border-radius:20px;padding:22px;box-shadow:0 0 0 1px var(--line);display:flex;flex-direction:column;gap:10px}
+.pk .ic{width:48px;height:48px;border-radius:14px;background:var(--sunL);color:#a07714;display:grid;place-items:center}
+.pk .ic svg{width:26px;height:26px}
+.pk p{color:var(--mid);font-size:15px}
+@media(max-width:980px){.perks{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.perks{grid-template-columns:1fr}}
+
+/* ===== Local ===== */
+.loc .card{display:grid;grid-template-columns:.85fr 1.15fr;border-radius:26px;overflow:hidden;background:var(--white);box-shadow:0 0 0 1px var(--line),0 50px 90px -60px rgba(35,42,74,.5)}
+.loc .info{padding:clamp(26px,4vw,48px);display:flex;flex-direction:column;gap:16px;min-width:0}
+.row{display:flex;gap:14px;align-items:flex-start;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.row .ic{width:44px;height:44px;border-radius:14px;background:var(--skyL);color:var(--blue);display:grid;place-items:center;flex:none}
+.row small{display:block;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
+.row div{min-width:0;overflow-wrap:anywhere}
+.row a{text-decoration:none}
+.row a:hover{color:var(--blue)}
+.open{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;letter-spacing:0;text-transform:none;padding:2px 10px;border-radius:999px;margin-left:6px;background:var(--mist);color:var(--mid)}
+.open.yes{background:var(--greenL);color:var(--green)}
+.open::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.map{position:relative;min-height:540px;background:var(--mist)}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+@media(max-width:900px){.loc .card{grid-template-columns:1fr}.map{min-height:360px}}
+
+/* ===== Final ===== */
+.final{position:relative;overflow:hidden;background:linear-gradient(160deg,var(--blue),var(--blue2));color:#fff;text-align:center}
+.final .wrap{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:22px}
+.final h2{font-size:clamp(38px,6vw,80px)}
+.final p{max-width:44ch;opacity:.88;font-size:18px}
+.final .kick{color:#fff}
+.final .stars{position:absolute;inset:0;pointer-events:none}
+.final .stars i{position:absolute;width:10px;height:14px;border-radius:2px;background:var(--sun);opacity:.0;animation:tw 4s ease-in-out infinite}
+@keyframes tw{50%{opacity:.5}}
+footer{background:var(--white);padding-block:52px 26px;color:var(--mid);font-size:15px}
+footer .top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:34px;padding-bottom:34px;border-bottom:1px solid var(--line)}
+footer h4{color:var(--ink);font-family:var(--disp);font-size:14px;letter-spacing:.12em;text-transform:uppercase;margin:0 0 14px}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+footer a{text-decoration:none;overflow-wrap:anywhere}
+footer a:hover{color:var(--blue)}
+footer .bot{padding-top:20px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13px}
+@media(max-width:820px){footer .top{grid-template-columns:1fr}}
+
+.js .rv{opacity:0;transform:translateY(40px);transition:opacity 1.1s var(--ease),transform 1.1s var(--ease)}
+.js .rv.on{opacity:1;transform:none}
+.js .rv.d1{transition-delay:.1s}.js .rv.d2{transition-delay:.2s}.js .rv.d3{transition-delay:.3s}
+
+/* ===== Assistente (esquerda) ===== */
+.abt{position:fixed;left:max(18px,env(safe-area-inset-left));bottom:max(18px,env(safe-area-inset-bottom));z-index:90;display:flex;align-items:center;gap:12px;cursor:pointer;background:var(--white);color:var(--ink);padding:7px 18px 7px 7px;border-radius:999px;font:600 14.5px var(--body);box-shadow:0 0 0 1px var(--line),0 20px 44px -16px rgba(35,42,74,.45);border:0;transition:transform .35s var(--ease)}
+.abt:hover{transform:translateY(-3px)}
+.abt .av{position:relative;width:42px;height:42px;border-radius:50%;background:var(--blue);display:grid;place-items:center}
+.abt .av::after{content:"";position:absolute;right:-1px;bottom:-1px;width:11px;height:11px;border-radius:50%;background:#3ccf7a;border:2px solid #fff}
+.as{position:fixed;left:max(18px,env(safe-area-inset-left));bottom:calc(max(18px,env(safe-area-inset-bottom)) + 70px);z-index:91;width:min(390px,calc(100vw - 36px));max-height:min(640px,calc(100svh - 120px));display:flex;flex-direction:column;background:var(--white);border-radius:24px;overflow:hidden;box-shadow:0 0 0 1px var(--line),0 50px 90px -30px rgba(35,42,74,.5);transform-origin:bottom left;animation:ap .45s var(--ease)}
+@keyframes ap{from{opacity:0;transform:scale(.9) translateY(14px)}}
+.as header{background:linear-gradient(135deg,var(--blue),var(--blue2));color:#fff;padding:14px 16px;display:flex;align-items:center;gap:12px}
+.as header .lg{width:42px;height:42px;border-radius:12px;background:rgba(255,255,255,.14);display:grid;place-items:center}
+.as header .lg svg{width:30px;height:30px}
+.as header b{font-family:var(--disp);font-size:17px;display:block;line-height:1.3}
+.as header small{font-size:12.5px;opacity:.9;display:flex;align-items:center;gap:6px}
+.as header small::before{content:"";width:8px;height:8px;border-radius:50%;background:#7dffb0}
+.as header button{margin-left:auto;background:rgba(255,255,255,.15);border:0;color:#fff;width:34px;height:34px;border-radius:50%;font-size:18px;cursor:pointer}
+.msgs{flex:1;overflow-y:auto;padding:18px;display:flex;flex-direction:column;gap:10px;background:var(--bg);font-size:15px}
+.m{max-width:86%;padding:11px 15px;border-radius:18px;line-height:1.5;animation:fin .35s var(--ease) forwards;opacity:0;transform:translateY(8px)}
+.m.b{background:var(--white);border-bottom-left-radius:6px;box-shadow:0 0 0 1px var(--line)}
+.m.u{background:var(--blue);color:#fff;align-self:flex-end;border-bottom-right-radius:6px}
+.m a{color:var(--blue);font-weight:600}
+.typing{display:flex;gap:5px;padding:15px 16px}
+.typing i{width:6px;height:6px;border-radius:50%;background:var(--sky);animation:dt 1s infinite}
+.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes dt{50%{transform:translateY(-5px);opacity:.4}}
+.chips{display:flex;gap:8px;flex-wrap:wrap;padding:12px 16px;border-top:1px solid var(--line)}
+.chips button{border:1px solid var(--mist2);background:var(--white);color:var(--ink);padding:7px 12px;border-radius:999px;font:500 13px var(--body);cursor:pointer;transition:all .25s}
+.chips button:hover{border-color:var(--blue);background:var(--skyL)}
+.as form{display:flex;gap:8px;padding:12px;border-top:1px solid var(--line)}
+.as input{flex:1;min-width:0;border:1px solid var(--line);border-radius:999px;padding:12px 16px;font:inherit;font-size:15px;background:var(--bg);color:var(--ink)}
+.as form button{width:46px;height:46px;border-radius:50%;border:0;background:var(--blue);color:#fff;display:grid;place-items:center;cursor:pointer}
+
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.js .rv,.fx{opacity:1;transform:none}.hero h1 .w>span{transform:none}}
+</style>
+</head>
+<body class="loading">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <g id="lgmk"><path d="M8 40V18M14 40V13M20 40V9M26 40V6" stroke="#6f93f2" stroke-width="3.6"/><text x="29" y="39" font-family="Bricolage Grotesque,Arial,sans-serif" font-weight="700" font-size="22" fill="currentColor">LG</text></g>
+  <g id="icPin"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12Z" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/></g>
+</defs></svg>
+
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="ld">
+    <svg viewBox="0 0 120 150" id="ldB"><rect x="14" y="10" width="92" height="132" rx="4" fill="#fff" stroke="#3341a8" stroke-width="3"/><path d="M4 142h112" stroke="#3341a8" stroke-width="3" stroke-linecap="round"/><g id="ldW"></g></svg>
+    <div class="num"><span id="ldNum">0</span><small>%</small></div>
+    <div class="nm">LG Ledilson Empreendimentos<span id="ldTip">ACENDENDO AS LUZES…</span></div>
+  </div>
+</div>
+
+<nav class="nav" id="nav"><div class="wrap">
+  <a class="logo" href="#inicio" aria-label="LG Ledilson Empreendimentos, início" style="color:var(--blue)"><svg viewBox="0 0 56 46" aria-hidden="true"><use href="#lgmk"/></svg><span><b>Ledilson</b><small>Empreendimentos</small></span></a>
+  <div class="links"><a href="#tipos">Imóveis</a><a href="#unidades">Unidades</a><a href="#espera">Lista de espera</a><a href="#localizacao">Contato</a></div>
+  <a class="btn pri wa mag" href="#" data-msg="Olá! Vim pelo site da Ledilson Empreendimentos e quero saber sobre imóveis para alugar."><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.2 1.2Z"/></svg><span>WhatsApp</span></a>
+</div></nav>
+
+<header class="hero" id="inicio">
+  <div class="wrap">
+    <div class="hero-tx">
+      <span class="kick fx" style="--d:.05s"><i></i>Aluga-se · Garanhuns - PE</span>
+      <h1 id="h1">O seu próximo endereço <span class="b">já está com a luz acesa.</span></h1>
+      <p class="lead fx" style="--d:.55s">Apartamentos, kitnets, flats mobiliados, casas e pontos comerciais para alugar em Garanhuns, com atendimento rápido e água inclusa em várias unidades.</p>
+      <div class="cta fx" style="--d:.7s">
+        <a class="btn pri" href="#unidades">Ver unidades <span class="arr">→</span></a>
+        <a class="btn sun" href="#espera">Me avise quando vagar</a>
+      </div>
+      <div class="types fx" style="--d:.85s"><span>Kitnet</span><span>Apartamento</span><span>Flat mobiliado</span><span>Ponto comercial</span><span>Casa</span></div>
+    </div>
+    <div class="bld fx" style="--d:.25s">
+      <svg viewBox="0 0 440 470" id="bld" role="img" aria-label="Ilustração de prédio: toque em um andar para ver o tipo de imóvel"></svg>
+      <div class="tip" id="tip" aria-live="polite"><small id="tipK">Toque em um andar</small><b id="tipT">Kitnets</b><p id="tipP">Quarto, banheiro e cozinha. Prático para quem mora sozinho.</p><a href="#" class="wa" id="tipA" data-msg="Olá! Tenho interesse em kitnet.">Perguntar disponibilidade →</a></div>
+      <div class="hint"><i></i>Ilustração: passe o mouse ou toque nos andares</div>
+    </div>
+  </div>
+</header>
+
+<div class="mq" aria-hidden="true"><div class="tr">
+  <span>Aluga-se</span><span>Apartamentos</span><span>Kitnets</span><span>Flats mobiliados</span><span>Pontos comerciais</span><span>Casas</span>
+  <span>Aluga-se</span><span>Apartamentos</span><span>Kitnets</span><span>Flats mobiliados</span><span>Pontos comerciais</span><span>Casas</span>
+</div></div>
+
+<section class="pad" id="tipos"><div class="wrap">
+  <div class="head">
+    <div class="l"><span class="kick rv"><i></i>O que alugamos</span><h2 class="rv d1">Um espaço para cada <span class="b">momento da sua vida</span></h2></div>
+    <p class="rv d2">Escolha um tipo para ver as unidades ou entrar na lista de espera.</p>
+  </div>
+  <div class="cats">
+    <button class="cat tilt rv" data-t="Kitnet"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M4 12h16M12 12v9M8 7h2"/></svg></span><h3>Kitnets</h3><p>Quarto, banheiro e cozinha. Ideal para estudantes e quem mora sozinho.</p><span class="go">Ver kitnets →</span></button>
+    <button class="cat tilt rv d1" data-t="Apartamento"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 21V5l8-3 8 3v16M4 21h16M9 8h2M13 8h2M9 12h2M13 12h2M10 21v-4h4v4"/></svg></span><h3>Apartamentos</h3><p>De 1 e 2 quartos, alguns com elevador e água inclusa no aluguel.</p><span class="go">Ver apartamentos →</span></button>
+    <button class="cat tilt rv d2" data-t="Flat mobiliado"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 18v-6a3 3 0 0 1 6 0v2h6v-2a3 3 0 0 1 6 0v6zM5 18v3M19 18v3"/></svg></span><h3>Flats mobiliados</h3><p>Chegue só com a mala: móveis prontos para você morar.</p><span class="go">Perguntar →</span></button>
+    <button class="cat tilt rv d3" data-t="Ponto comercial"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21h18M5 21V10h14v11M3 10l2-6h14l2 6M9 21v-6h6v6"/></svg></span><h3>Pontos comerciais</h3><p>Salas e lojas para o seu negócio crescer em Garanhuns.</p><span class="go">Perguntar →</span></button>
+  </div>
+</div></section>
+
+<section class="units-sec pad" id="unidades"><div class="wrap">
+  <div class="head">
+    <div class="l"><span class="kick rv"><i></i>Unidades</span><h2 class="rv d1">Disponíveis e <span class="b">recém-alugadas</span></h2></div>
+    <div class="ufil rv d2" id="ufil"><button class="on" data-f="all">Todas</button><button data-f="av">Disponíveis</button><button data-f="Kitnet">Kitnets</button><button data-f="Apartamento">Apartamentos</button><button data-f="Casa">Casas</button></div>
+  </div>
+  <div class="units" id="units"></div>
+  <p class="rv" style="margin-top:22px;text-align:center;color:var(--mid);font-size:15px">As unidades alugam rápido. <a href="#espera" style="color:var(--blue);font-weight:600">Entre na lista de espera e seja avisado primeiro →</a></p>
+</div></section>
+
+<section class="wait pad" id="espera"><div class="wrap"><div class="gr">
+  <div class="tx">
+    <span class="bell rv" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4zM10 20a2 2 0 0 0 4 0"/></svg></span>
+    <span class="kick rv"><i></i>Lista de espera</span>
+    <h2 class="rv d1">Vagou? <span class="hl">Você fica sabendo primeiro.</span></h2>
+    <p class="rv d2">Diga o que você procura e a equipe da Ledilson te chama assim que uma unidade com o seu perfil ficar livre.</p>
+  </div>
+  <form class="form rv d1" id="waitF">
+    <div class="field"><label>Tipo de imóvel</label><div class="seg" id="seg"><button type="button" class="on">Kitnet</button><button type="button">Apartamento</button><button type="button">Flat mobiliado</button><button type="button">Ponto comercial</button></div></div>
+    <div class="two"><div class="field"><label for="wN">Seu nome</label><input id="wN" autocomplete="name" placeholder="Seu nome"></div><div class="field"><label for="wQ">Quartos</label><select id="wQ"><option>Tanto faz</option><option>1 quarto</option><option>2 quartos</option></select></div></div>
+    <div class="two"><div class="field"><label for="wB">Bairro de preferência</label><input id="wB" placeholder="Ex.: Centro, Heliópolis"></div><div class="field"><label for="wM">Mudança para</label><select id="wM"><option>O quanto antes</option><option>Próximo mês</option><option>Em 2 a 3 meses</option></select></div></div>
+    <div class="field"><label>Importante para mim</label><div class="checks"><label><input type="checkbox" value="Água inclusa">Água inclusa</label><label><input type="checkbox" value="Elevador">Elevador</label><label><input type="checkbox" value="Mobiliado">Mobiliado</label><label><input type="checkbox" value="Garagem">Garagem</label></div></div>
+    <button class="btn pri" type="submit">Entrar na lista pelo WhatsApp <span class="arr">→</span></button>
+  </form>
+</div></div></section>
+
+<section class="pad" style="padding-top:0"><div class="wrap">
+  <div class="perks">
+    <div class="pk rv"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3s6 7 6 11a6 6 0 0 1-12 0c0-4 6-11 6-11Z"/></svg></span><h3>Água inclusa</h3><p>Em várias unidades a taxa de água já vem no valor do aluguel.</p></div>
+    <div class="pk rv d1"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M12 3v18M9 9l-1.5 2h3zM15 13l1.5-2h-3z"/></svg></span><h3>Prédio com elevador</h3><p>Unidades em andares altos com elevador e vista para a praça.</p></div>
+    <div class="pk rv d2"><span class="ic"><svg viewBox="0 0 24 24"><use href="#icPin"/></svg></span><h3>Bem localizados</h3><p>Imóveis no centro e em bairros com fácil acesso em Garanhuns.</p></div>
+    <div class="pk rv d3"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M13 3L4 14h7l-1 7 9-11h-7z"/></svg></span><h3>Resposta rápida</h3><p>Atendimento direto no WhatsApp, de segunda a sexta.</p></div>
+  </div>
+</div></section>
+
+<section class="loc" id="localizacao" style="padding-bottom:clamp(70px,9vw,110px)"><div class="wrap">
+  <div class="card rv">
+    <div class="info">
+      <span class="kick"><i></i>Escritório</span>
+      <h2 style="font-size:clamp(30px,3.6vw,44px)">Venha conhecer <span class="b">as unidades</span></h2>
+      <div class="row"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24"><use href="#icPin"/></svg></span><div><small>Endereço</small>Rua Prof. Marcos da Fonseca, 576<br>Heliópolis, Garanhuns - PE</div></div>
+      <div class="row"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><small>Horário <span class="open" id="open">…</span></small>Segunda a sexta, das 07h às 17h</div></div>
+      <div class="row" style="border:0;padding:0"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 5c0 8 7 15 15 15l2-4-4-2-2 2c-2-1-4-3-5-5l2-2-2-4Z"/></svg></span><div><small>Telefones</small><a class="wa" href="#" data-msg="Olá! Vim pelo site da Ledilson Empreendimentos.">(87) 99115-6809 · WhatsApp</a><br><a href="tel:+5587999057201">(87) 99905-7201</a><br><a href="tel:+558737617205">(87) 3761-7205</a></div></div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn pri" href="https://www.google.com/maps/dir/?api=1&destination=Rua+Prof.+Marcos+da+Fonseca,+576,+Heli%C3%B3polis,+Garanhuns+-+PE" target="_blank" rel="noopener">Como chegar <span class="arr">→</span></a>
+        <a class="btn sec wa" href="#" data-msg="Olá! Gostaria de agendar uma visita a uma unidade.">Agendar visita</a>
+      </div>
+    </div>
+    <div class="map"><iframe title="Mapa do escritório da Ledilson Empreendimentos no Google Maps" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Rua+Prof.+Marcos+da+Fonseca,+576,+Heli%C3%B3polis,+Garanhuns+-+PE&output=embed"></iframe></div>
+  </div>
+</div></section>
+
+<section class="final pad" id="final">
+  <div class="stars" id="stars"></div>
+  <div class="wrap">
+    <span class="kick rv"><i></i>Aluga-se</span>
+    <h2 class="rv d1">Tem uma luz acesa esperando por você.</h2>
+    <p class="rv d2">Fale com a Ledilson Empreendimentos e encontre o imóvel certo para morar ou trabalhar.</p>
+    <a class="btn sun wa mag rv d3" href="#" data-msg="Olá! Vim pelo site e quero alugar um imóvel.">Quero alugar <span class="arr">→</span></a>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div class="top">
+    <div style="display:flex;flex-direction:column;gap:14px"><a class="logo" href="#inicio" style="color:var(--blue)"><svg viewBox="0 0 56 46" aria-hidden="true"><use href="#lgmk"/></svg><span><b>Ledilson</b><small>Empreendimentos</small></span></a><p>Aluguel de apartamentos, kitnets, flats mobiliados, casas e pontos comerciais em Garanhuns - PE.</p></div>
+    <div><h4>Contato</h4><ul><li><a class="wa" href="#" data-msg="Olá! Vim pelo site.">(87) 99115-6809</a></li><li><a href="tel:+5587999057201">(87) 99905-7201</a></li><li><a href="tel:+558737617205">(87) 3761-7205</a></li></ul></div>
+    <div><h4>Escritório</h4><p>Rua Prof. Marcos da Fonseca, 576<br>Heliópolis, Garanhuns - PE<br>Seg a sex, 07h às 17h</p></div>
+  </div>
+  <div class="bot"><span>© <span id="yr">2026</span> LG Ledilson Empreendimentos</span><span>Disponibilidade sujeita a alteração.</span></div>
+</div></footer>
+
+<button class="abt" id="ab" aria-expanded="false" aria-controls="as"><span class="av"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4Z"/></svg></span>Tire sua dúvida</button>
+<div class="as" id="as" hidden role="dialog" aria-label="Assistente Ledilson Empreendimentos">
+  <header><span class="lg" style="color:#fff"><svg viewBox="0 0 56 46"><use href="#lgmk"/></svg></span><div><b>Assistente LG</b><small>Responde rapidamente</small></div><button id="asX" aria-label="Fechar">×</button></header>
+  <div class="msgs" id="msgs"></div>
+  <div class="chips" id="chips"></div>
+  <form id="asF"><input id="asI" placeholder="Digite sua dúvida..." autocomplete="off" aria-label="Sua dúvida"><button aria-label="Enviar"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3 20l18-8L3 4v6l12 2-12 2Z"/></svg></button></form>
+</div>
+
+<script>
+document.documentElement.classList.add('js');
+const WA='5587991156809', wa=m=>'https://wa.me/'+WA+'?text='+encodeURIComponent(m);
+const bindWA=root=>root.querySelectorAll('.wa').forEach(a=>{a.href=wa(a.dataset.msg||'Olá! Vim pelo site da Ledilson Empreendimentos.');a.target='_blank';a.rel='noopener'});
+bindWA(document);
+document.getElementById('yr').textContent=new Date().getFullYear();
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches, fine=matchMedia('(hover:hover)').matches;
+const NS='http://www.w3.org/2000/svg',el=(t,a,p)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);p&&p.appendChild(e);return e};
+
+// título
+(function(){const h=document.getElementById('h1');let i=0;
+  const wrapT=(n,cls)=>{const f=document.createDocumentFragment();n.textContent.split(/(\s+)/).forEach(t=>{if(!t.trim()){f.appendChild(document.createTextNode(t));return}const w=document.createElement('span');w.className='w';const s=document.createElement('span');s.textContent=t;if(cls)s.className=cls;s.style.setProperty('--i',i++);w.appendChild(s);f.appendChild(w)});return f};
+  [...h.childNodes].forEach(n=>{if(n.nodeType===3)n.replaceWith(wrapT(n));else n.replaceWith(wrapT(n,n.className))});
+})();
+
+// abertura: janelas acendendo = porcentagem
+(function(){const g=document.getElementById('ldW'),W=[];for(let r=0;r<6;r++)for(let c=0;c<4;c++)W.push(el('rect',{x:24+c*20,y:20+r*20,width:12,height:12,rx:2,class:'win-l'},g));
+  const order=W.map((w,i)=>i).sort(()=>Math.random()-.5),L=document.getElementById('loader'),N=document.getElementById('ldNum'),T=document.getElementById('ldTip');
+  const tips=['ACENDENDO AS LUZES…','ABRINDO AS PORTAS…','SUA CHAVE ESTÁ PRONTA'];
+  const dur=reduce?200:2500,t0=performance.now();
+  function f(t){const p=Math.min(1,(t-t0)/dur),e=1-Math.pow(1-p,2.2),v=Math.round(e*100);N.textContent=v;const lit=Math.round(e*W.length);order.forEach((idx,k)=>W[idx].classList.toggle('on',k<lit));T.textContent=tips[Math.min(2,Math.floor(e*3))];
+    if(p<1)requestAnimationFrame(f);else setTimeout(done,380)}
+  function done(){if(L.classList.contains('go'))return;L.classList.add('go');document.body.classList.remove('loading');document.body.classList.add('ready');setTimeout(()=>L.remove(),900)}
+  requestAnimationFrame(f);setTimeout(done,5500)})();
+
+// prédio interativo
+(function(){const s=document.getElementById('bld');
+  const FL=[{k:'Cobertura',t:'Flats mobiliados',p:'Móveis prontos para você chegar só com a mala.',m:'Olá! Tenho interesse em flat mobiliado.'},
+    {k:'4º e 5º andar',t:'Apartamentos',p:'1 e 2 quartos, com elevador e vista para a cidade.',m:'Olá! Tenho interesse em apartamento.'},
+    {k:'4º e 5º andar',t:'Apartamentos',p:'1 e 2 quartos, com elevador e vista para a cidade.',m:'Olá! Tenho interesse em apartamento.'},
+    {k:'2º e 3º andar',t:'Kitnets',p:'Quarto, banheiro e cozinha. Prático para quem mora sozinho.',m:'Olá! Tenho interesse em kitnet.'},
+    {k:'2º e 3º andar',t:'Kitnets',p:'Quarto, banheiro e cozinha. Prático para quem mora sozinho.',m:'Olá! Tenho interesse em kitnet.'},
+    {k:'Térreo',t:'Pontos comerciais',p:'Lojas de frente para a rua, prontas para o seu negócio.',m:'Olá! Tenho interesse em ponto comercial.'}];
+  el('ellipse',{cx:220,cy:452,rx:200,ry:12,fill:'rgba(51,65,168,.10)'},s);
+  el('rect',{x:70,y:28,width:300,height:420,rx:6,fill:'#fff',stroke:'#3341a8','stroke-width':3},s);
+  el('rect',{x:60,y:18,width:320,height:16,rx:4,fill:'#3341a8'},s);
+  for(let i=0;i<5;i++)el('path',{d:'M70 '+(98+i*60)+'h300',stroke:'#e3e8f8','stroke-width':2},s);
+  const tip=document.getElementById('tip'),tk=document.getElementById('tipK'),tt=document.getElementById('tipT'),tp=document.getElementById('tipP'),ta=document.getElementById('tipA');
+  const groups=[];
+  FL.forEach((f,i)=>{const y=38+i*60,g=el('g',{class:'fl',tabindex:0,role:'button','aria-label':f.k+': '+f.t},s);el('rect',{class:'band',x:70,y:y-4,width:300,height:60},g);groups.push(g);
+    if(i===5){for(let c=0;c<3;c++){el('rect',{x:88+c*96,y:y+6,width:76,height:46,rx:3,fill:'#e8ecfa',stroke:'#3341a8','stroke-width':2},g);for(let l=0;l<5;l++)el('path',{d:'M'+(92+c*96)+' '+(y+14+l*8)+'h68',stroke:'#c3cdf0','stroke-width':2},g);el('rect',{class:'w',x:96+c*96,y:y+2,width:60,height:3,rx:1},g)}}
+    else for(let c=0;c<5;c++){const w=el('rect',{class:'w',x:90+c*56,y:y+10,width:36,height:34,rx:3},g);if(Math.random()<.45)w.classList.add('lit');el('path',{d:'M'+(108+c*56)+' '+(y+10)+'v34',stroke:'#fff','stroke-width':2,'pointer-events':'none'},g)}
+    const show=()=>{groups.forEach(x=>x.classList.toggle('on',x===g));tk.textContent=f.k;tt.textContent=f.t;tp.textContent=f.p;ta.dataset.msg=f.m;ta.href=wa(f.m);if(innerWidth>960)tip.style.top=Math.max(0,(y/470)*100-4)+'%'};
+    g.addEventListener('mouseenter',show);g.addEventListener('click',show);g.addEventListener('focus',show);g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();show()}});
+  });
+  el('rect',{x:196,y:400,width:48,height:48,fill:'#3341a8',rx:2},s);
+  // janelas que acendem e apagam
+  if(!reduce)setInterval(()=>{const ws=s.querySelectorAll('.fl:not(.on) .w');const w=ws[Math.floor(Math.random()*ws.length)];w&&w.classList.toggle('lit')},700);
+  groups[3].dispatchEvent(new Event('click'));
+})();
+
+// tipos -> unidades
+document.querySelectorAll('.cat').forEach(c=>c.onclick=()=>{const t=c.dataset.t;const btn=document.querySelector('#ufil button[data-f="'+t+'"]');
+  if(btn){btn.click();document.getElementById('unidades').scrollIntoView({behavior:reduce?'auto':'smooth'})}
+  else{document.querySelectorAll('#seg button').forEach(b=>b.classList.toggle('on',b.textContent===t));document.getElementById('espera').scrollIntoView({behavior:reduce?'auto':'smooth'})}});
+
+// unidades
+const U=[
+ {t:'Kitnet',img:'img/kitnet302.jpg',n:'Kitnet 302',loc:'Garanhuns - PE',ft:['1 quarto','Banheiro','Cozinha'],av:true},
+ {t:'Apartamento',img:'img/apto502.jpg',n:'Apto 502 · Av. Afonso Pena, 28',loc:'Centro · vista para a Praça Mestre Dominguinhos',ft:['1 quarto','5º andar','Elevador']},
+ {t:'Apartamento',img:'img/saovicente.jpg',n:'Apartamento Rua São Vicente',loc:'Rua São Vicente, Garanhuns',ft:['2 quartos','Sala','Cozinha e área de serviço','Banheiro'],water:true},
+ {t:'Apartamento',img:'img/apto101.jpg',n:'Apto 101 · sala americana',loc:'Garanhuns - PE',ft:['1 quarto','Sala americana','Banheiro','Área de serviço'],water:true},
+ {t:'Apartamento',img:'img/ruaxv.jpg',n:'Apartamento Rua XV, nº 45',loc:'Rua XV, nº 45, Garanhuns',ft:['Apartamento'],water:true},
+ {t:'Casa',img:'img/boavista.jpg',n:'Casa na Boa Vista',loc:'Rua da igreja da Boa Vista',ft:['Casa','Aluga no estado']}
+];
+const units=document.getElementById('units');let uf='all';
+function renderU(){const list=U.filter(u=>uf==='all'||(uf==='av'?u.av:u.t===uf));
+  units.innerHTML=list.length?list.map((u,k)=>'<article class="u'+(u.av?'':' rented')+'" style="--k:'+k+'"><div class="ph"><img src="'+u.img+'" alt="'+u.n+'" loading="lazy"><span class="st'+(u.av?' av':'')+'">'+(u.av?'Disponível':'Alugado')+'</span><span class="ty">'+u.t+'</span></div><div class="bd"><h3>'+u.n+'</h3><div class="loc"><svg width="16" height="16" viewBox="0 0 24 24"><use href="#icPin"/></svg>'+u.loc+'</div><div class="ft">'+(u.water?'<span class="wt">Água inclusa</span>':'')+u.ft.map(f=>'<span>'+f+'</span>').join('')+'</div><div class="act">'+(u.av?'<a class="btn pri wa" href="#" data-msg="Olá! Tenho interesse na '+u.n+'. Ainda está disponível? Qual o valor?">Quero alugar <span class="arr">→</span></a>':'<a class="btn sec" href="#espera" data-t="'+u.t+'">Avise-me quando vagar</a>')+'</div></div></article>').join('')
+  :'<div style="grid-column:1/-1;text-align:center;padding:40px;background:var(--bg);border-radius:22px;color:var(--mid)">Nenhuma unidade nesse filtro agora. <a href="#espera" style="color:var(--blue);font-weight:600">Entre na lista de espera →</a></div>';
+  bindWA(units);units.querySelectorAll('a[data-t]').forEach(a=>a.addEventListener('click',()=>document.querySelectorAll('#seg button').forEach(b=>b.classList.toggle('on',b.textContent===a.dataset.t))))}
+document.querySelectorAll('#ufil button').forEach(b=>b.onclick=()=>{uf=b.dataset.f;document.querySelectorAll('#ufil button').forEach(x=>x.classList.toggle('on',x===b));renderU()});
+renderU();
+
+// lista de espera
+document.querySelectorAll('#seg button').forEach(b=>b.onclick=()=>document.querySelectorAll('#seg button').forEach(x=>x.classList.toggle('on',x===b)));
+document.getElementById('waitF').onsubmit=e=>{e.preventDefault();const v=id=>document.getElementById(id).value.trim();const tipo=document.querySelector('#seg button.on').textContent;const ck=[...document.querySelectorAll('.checks input:checked')].map(c=>c.value);
+  open(wa('Olá!'+(v('wN')?' Sou '+v('wN')+'.':'')+' Quero entrar na lista de espera da Ledilson Empreendimentos:\n• Tipo: '+tipo+'\n• Quartos: '+v('wQ')+'\n• Bairro: '+(v('wB')||'Qualquer')+'\n• Mudança: '+v('wM')+(ck.length?'\n• Importante: '+ck.join(', '):'')),'_blank','noopener')};
+
+// aberto agora?
+(function(){const o=document.getElementById('open');const n=new Date(new Date().toLocaleString('en-US',{timeZone:'America/Recife'})),d=n.getDay(),m=n.getHours()*60+n.getMinutes();const on=d>=1&&d<=5&&m>=420&&m<1020;o.textContent=on?'Aberto agora':'Fechado agora';o.classList.toggle('yes',on)})();
+
+// janelas no final
+(function(){const s=document.getElementById('stars');for(let i=0;i<26;i++){const e=document.createElement('i');e.style.left=Math.random()*100+'%';e.style.top=Math.random()*100+'%';e.style.animationDelay=(Math.random()*4)+'s';s.appendChild(e)}})();
+
+// revelar
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(x=>io.observe(x));
+const nav=document.getElementById('nav');addEventListener('scroll',()=>nav.classList.toggle('solid',scrollY>30),{passive:true});
+if(fine&&!reduce){document.querySelectorAll('.tilt').forEach(c=>{c.addEventListener('pointermove',e=>{const r=c.getBoundingClientRect();c.style.setProperty('--ry',((e.clientX-r.left)/r.width-.5)*10+'deg');c.style.setProperty('--rx',-((e.clientY-r.top)/r.height-.5)*10+'deg')});c.addEventListener('pointerleave',()=>{c.style.setProperty('--rx','0deg');c.style.setProperty('--ry','0deg')})});
+  document.querySelectorAll('.mag').forEach(b=>{b.addEventListener('pointermove',e=>{const r=b.getBoundingClientRect();b.style.setProperty('--x',(e.clientX-r.left-r.width/2)*.14+'px');b.style.setProperty('--y',(e.clientY-r.top-r.height/2)*.22+'px')});b.addEventListener('pointerleave',()=>{b.style.setProperty('--x','0px');b.style.setProperty('--y','0px')})})}
+
+// assistente
+const KB=[
+ {q:'Tem kitnet disponível?',k:['kitnet','kit','quitinete','disponí','disponi','vaga','livre'],a:'Tem kitnet disponível agora! <a href="#unidades">Ver unidades →</a>',w:'Olá! Tenho interesse na kitnet disponível. Qual o valor?'},
+ {q:'Qual o valor do aluguel?',k:['valor','preço','preco','quanto','custa','aluguel'],a:'O valor muda conforme a unidade. Chame no WhatsApp que a equipe te passa na hora.',w:'Olá! Qual o valor do aluguel das unidades disponíveis?'},
+ {q:'A água é inclusa?',k:['água','agua','taxa','conta','inclus'],a:'Em várias unidades a taxa de água já vem no valor do aluguel. Pergunte sobre a que te interessa.'},
+ {q:'Tem flat mobiliado?',k:['flat','mobili','móve','move'],a:'Temos flats mobiliados! Confirme a disponibilidade pelo WhatsApp.',w:'Olá! Tenho interesse em flat mobiliado.'},
+ {q:'Ponto comercial',k:['ponto','loja','comercial','sala comercial','negócio','negocio'],a:'Temos pontos comerciais para alugar. Fale com a equipe para ver as opções.',w:'Olá! Procuro um ponto comercial para alugar.'},
+ {q:'Onde fica o escritório?',k:['onde','endereço','endereco','escritório','escritorio','horário','horario'],a:'Rua Prof. Marcos da Fonseca, 576, Heliópolis. Segunda a sexta, das 07h às 17h. <a href="#localizacao">Ver no mapa →</a>'}
+];
+const msgs=document.getElementById('msgs'),chips=document.getElementById('chips'),as=document.getElementById('as'),ab=document.getElementById('ab');
+const add=(h,c)=>{const d=document.createElement('div');d.className='m '+c;d.innerHTML=h;msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight};
+function ask(text){add(text.replace(/</g,'&lt;'),'u');const t=document.createElement('div');t.className='m b typing';t.style.opacity=1;t.innerHTML='<i></i><i></i><i></i>';msgs.appendChild(t);msgs.scrollTop=msgs.scrollHeight;
+  setTimeout(()=>{t.remove();const n=text.toLowerCase();let best=null,sc=0;KB.forEach(e=>{const s=e.k.filter(k=>n.includes(k)).length+(e.q===text?5:0);if(s>sc){sc=s;best=e}});
+    if(best)add(best.a+(best.w?'<br><a href="'+wa(best.w)+'" target="_blank" rel="noopener">Continuar no WhatsApp →</a>':''),'b');
+    else add('Essa a equipe responde rapidinho! <a href="'+wa('Olá! Vim pelo site e tenho uma dúvida: '+text)+'" target="_blank" rel="noopener">Enviar no WhatsApp →</a>','b')},700)}
+KB.forEach(e=>{const b=document.createElement('button');b.type='button';b.textContent=e.q;b.onclick=()=>ask(e.q);chips.appendChild(b)});
+msgs.addEventListener('click',e=>{if(e.target.matches('a[href^="#"]'))openA(false)});
+let hi=false;function openA(o){as.hidden=!o;ab.setAttribute('aria-expanded',o);if(o&&!hi){hi=true;add('Olá! Sou o assistente da Ledilson Empreendimentos. Procurando kitnet, apartamento ou ponto comercial?','b')}}
+ab.onclick=()=>openA(as.hidden);document.getElementById('asX').onclick=()=>openA(false);
+addEventListener('keydown',e=>{if(e.key==='Escape')openA(false)});
+document.getElementById('asF').onsubmit=e=>{e.preventDefault();const i=document.getElementById('asI');if(i.value.trim()){ask(i.value.trim());i.value=''}};
+</script>
+</body>
+</html>
